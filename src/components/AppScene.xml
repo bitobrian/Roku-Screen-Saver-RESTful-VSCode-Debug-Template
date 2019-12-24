@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="AppScene" extends="Scene" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+	<script type="text/brightscript" uri="pkg:/components/AppScene.brs"/>
+  <children>
+
+    <Rectangle 
+      id = "textRectangle"
+      width = "640" 
+      height = "60" 
+      color = "0x10101000" >
+
+      <Label 
+        id = "movingLabel" 
+        width = "500" 
+        height = "60" 
+        text = "Our Global Variable Text" 
+        horizAlign = "center" 
+        vertAlign = "center" />
+
+    </Rectangle>
+
+    <Animation 
+      id = "scrollbackAnimation" 
+      duration = "10" 
+      repeat = "true" 
+      easeFunction = "linear" >
+
+      <Vector2DFieldInterpolator 
+        key = "[ 0.0, 0.5, 1.0 ]" 
+        keyValue = "[ [0.0, 0.0], [360.0, 0.0], [0.0, 0.0] ]" 
+        fieldToInterp = "movingLabel.translation" />
+
+    </Animation>
+      
+    <Timer 
+      id = "dataTimer" 
+      repeat = "true" 
+      duration = "5" />
+
+  </children>
+</component>

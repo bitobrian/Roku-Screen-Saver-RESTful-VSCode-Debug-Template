@@ -1,0 +1,12 @@
+#
+#  Roku Channel Manifest File
+#  Full spec at bit.ly/roku-manifest-file
+#
+
+##   Channel Details
+screensaver_title=Screensaver
+major_version=0
+minor_version=1
+build_version=0
+
+ui_resolutions=fhd
